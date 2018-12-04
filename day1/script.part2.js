@@ -14,8 +14,6 @@ const calculateFrequency = (startFrequency, changesInFrequencyArray) => {
         set.add(result);
     };
 
-    // return result;
-
     return calculateFrequency(result, changesInFrequencyArray);
 };
 
