@@ -1,0 +1,13 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "advent of code raphael haettich",
+  "main": "index.js",
+  "repository": "git@github.com:RaphaelHaettich/adventofcode.git",
+  "author": "Raphael Hättich <raphael@haettich.ch>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "day1": "node day1/script.part1.js && node day1/script.part2.js"
+  }
+}
