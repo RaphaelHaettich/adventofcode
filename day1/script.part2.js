@@ -19,4 +19,4 @@ const calculateFrequency = (startFrequency, changesInFrequencyArray) => {
 
 const endFrequnecy = calculateFrequency(startFrequency, changesInFrequencyArray);
 
-console.log('endFrequnecy: ', endFrequnecy);
+console.log('twice: ', endFrequnecy);
