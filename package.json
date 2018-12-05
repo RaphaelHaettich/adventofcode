@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "day1": "node day1/script.part1.js && node day1/script.part2.js",
-    "day2": "node day2/script.part1.js"
+    "day1": "node day1/calculateFrequency.day1.part1.js && node day1/findTwiceValue.day1.part2.js",
+    "day2": "node day2/calculcateHashFromLetterCount.day2.part1.js && node day2/findLongestLetterPattern.day2.part2.js"
   }
 }
