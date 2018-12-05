@@ -54,7 +54,7 @@ const claimsObjArrayLoop = (claimsObjArray) => {
     }
 };
 
-const getDuplicateClaims = () => {
+const getUniqueId = () => {
 
     const claimsObjArray = claimsToObjectArray(claimsArray);
     const uniqueId = claimsObjArrayLoop(claimsObjArray);
@@ -62,4 +62,4 @@ const getDuplicateClaims = () => {
     return uniqueId;
 }
 
-console.log('UniqueId:', getDuplicateClaims());
+console.log('UniqueId:', getUniqueId());
