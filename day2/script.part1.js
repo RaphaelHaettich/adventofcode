@@ -6,7 +6,7 @@ const ids = fileContent.split("\n")
 let twoLetters = 0;
 let threeLetters = 0;
 
-const calculateFrequency = (ids) => {
+const calculateLetters = (ids) => {
     for (let id of ids) {
         const map = lettersToMap(id);
         let twoCount = 0;
@@ -42,7 +42,7 @@ const lettersToMap = (id) => {
     return map;
 }
 
-calculateFrequency(ids);
+calculateLetters(ids);
 
 console.log('twoLetters: ', twoLetters);
 console.log('threeLetters: ', threeLetters);
