@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "day1": "node day1/script.part1.js && node day1/script.part2.js"
+    "day1": "node day1/script.part1.js && node day1/script.part2.js",
+    "day2": "node day2/script.part1.js"
   }
 }
