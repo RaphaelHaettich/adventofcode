@@ -20,30 +20,34 @@ const formatArray = (logArray) => {
 const sortArray = (logArrayFormatted) => logArrayFormatted.sort((a, b) => a.time - b.time);;
 
 const groupGuardActivites = (logArraySorted) => {
-    const newObject = {};
+    const groupedGuards = {};
     let currentGuardObj = false;
     for (let index = 0; index < logArraySorted.length; index++) {
-        console.log("here");
         const logArray = logArraySorted[index];
         const action = logArray.msg[0] === 'wakes' ? 'start' : 'end';
         if (logArray.msg[0] === 'Guard') {
             if (currentGuardObj) {
-                newObject[currentGuardObj.index].push({ time: logArray.time, action, guardId: currentGuardObj.guardId });
+                groupedGuards[currentGuardObj.index].push({ time: logArray.time, action, guardId: currentGuardObj.guardId });
             }
-            newObject[index] = [{ time: logArray.time, action: 'start', guardId: logArray.msg[1] }];
+            groupedGuards[index] = [{ time: logArray.time, action: 'start', guardId: logArray.msg[1] }];
             currentGuardObj = { guardId: logArray.msg[1], index }
             continue;
         };
-        newObject[currentGuardObj.index].push({ time: logArray.time, action, guardId: currentGuardObj.guardId });
+        groupedGuards[currentGuardObj.index].push({ time: logArray.time, action, guardId: currentGuardObj.guardId });
     }
-    return newObject;
+    return groupedGuards;
+};
+
+const calculateGuardSleepTime = (groupedGuardActivites) => {
+
 };
 
 const doFunc = (logArray) => {
     const logArrayFormatted = formatArray(logArray);
     const logArraySorted = sortArray(logArrayFormatted);
     const groupedGuardActivites = groupGuardActivites(logArraySorted);
-    console.log(groupedGuardActivites);
+    const calculatedGuardSleepTime = calculateGuardSleepTime(groupedGuardActivites);
+    console.log(calculatedGuardSleepTime);
 };
 
 doFunc(logArray);
