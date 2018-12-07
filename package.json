@@ -11,6 +11,6 @@
     "day1": "node day1/calculateFrequency.day1.part1.js && node day1/findTwiceValue.day1.part2.js",
     "day2": "node day2/calculcateHashFromLetterCount.day2.part1.js && node day2/findLongestLetterPattern.day2.part2.js",
     "day3": "node day3/getDuplicateClaimsMatrix.day3.part1.js && node day3/getUniqueMatrixClaim.day3.part2.js",
-    "day4": "node day3/findLongestSleepMinuteFromLongestSleep.day4.part1.js"
+    "day4": "node day4/findLongestSleepMinuteFromLongestSleep.day4.part1.js && node day4/findLongestSleepMinute.day4.part2.js"
   }
 }
